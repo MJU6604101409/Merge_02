@@ -6,13 +6,23 @@
       @reset="onReset"
       class="q-gutter-md"
     >
+      <!-- Name -->
       <q-input
         filled
         v-model="name"
         label="Your name *"
-        hint="Name and surname"
+        hint="Name"
         lazy-rules
-        :rules="[ val => val && val.length > 0 || 'Please type something']"
+        :rules="[ val => val && val.length > 0 || 'Please type your name']"
+      />
+      <!-- Surname -->
+      <q-input
+        filled
+        v-model="surname"
+        label="Your surname *"
+        hint="Surname"
+        lazy-rules
+        :rules="[ val => val && val.length > 0 || 'Please type your surname']"
       />
 
       <q-input
